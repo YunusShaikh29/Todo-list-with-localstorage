@@ -1,0 +1,106 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+body{
+    height: 100%;
+    background-color: black;
+    color: white;
+
+    padding: 5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 5rem;
+}
+
+
+.btn {
+    padding: 1em 2em;
+    color: inherit;
+    background: gray;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:active {
+    transform: translateY(5px);
+}
+
+.todo_input{
+    padding: 1em;
+    margin-right: 1.5rem;
+    width: 300px;
+}
+
+
+.todo_list_container{
+    margin-top: 2rem;
+}
+
+
+.todo_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+p {
+    border: 2px solid wheat;
+    flex-grow: 1;
+    align-self: stretch;
+    font-size: 1.1rem;
+    padding: .5em;
+}
+
+
+
+/* mediaquery */
+
+@media (max-width : 450px) {
+    main{
+        margin-left: 2rem;
+    }
+    .todo_input{
+        width: fit-content;
+    }
+    .button_container > *{
+        width: fit-content;
+    }
+    .todo_list_container{
+
+    }
+}
+
+@media (max-width: 300px) {
+    .todo_input{
+        width: 100px;
+    }
+    .button_container > *{
+        width: fit-content;
+        padding: auto;
+    }
+}
